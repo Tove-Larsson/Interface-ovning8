@@ -4,7 +4,7 @@ namespace Interface_ovning8.Extra
 {
 	internal class ExtraClass : IExtra1, IExtra2
 	{
-		public int Run()
+		int IExtra1.Run()
 		{
 			Console.WriteLine("Run with int");
 			return 7;

@@ -17,7 +17,7 @@ namespace Interface_ovning8
 
 			/* Vad är fördelen med interfacet jämfört med hur det var från början?
 			 * 
-			 * Fördelen är att jag kan använda en och samma metod på flera klasser
+			 * Fördelen är att jag kan använda samma metodnamn på flera klasser
 			 * och ändå ha möjlighet att göra olika implementationer för dessa klasser.
 			 * Man kan även behandla olika klasser på samma sätt, samt slippa komma på nya metodnamn.
 			 */
@@ -30,15 +30,23 @@ namespace Interface_ovning8
 
 			program1.ShowSomeInfo();
 
-			// Extra delen:
+			// Extradelen en instans med explicit 
 
-			IExtra1 extra1 = new ExtraClass();
+			ExtraClass extraClass = new ExtraClass();
 
-			IExtra2 extra2 = new ExtraClass();
+			((IExtra1)extraClass).Run();
+
+			((IExtra2)extraClass).Run();
 
 
-			extra1.Run();
-			extra2.Run();
+			// Alternativ med 2 instanser (enligt föreläsningsmaterialet)
+
+			//IExtra1 extra1 = new ExtraClass();
+
+			//IExtra2 extra2 = new ExtraClass();
+
+			//extra1.Run();
+			//extra2.Run();
 
 		}
 	}
